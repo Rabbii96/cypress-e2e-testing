@@ -1,3 +1,5 @@
+import { API_URL } from './urls';
+
 // Custom commands keep specs readable: tests say WHAT they do, commands hold HOW.
 
 Cypress.Commands.add('loginUi', (username, password) => {
@@ -15,7 +17,7 @@ Cypress.Commands.add('flashShouldContain', (text) => {
 Cypress.Commands.add('apiToken', () => {
   return cy.fixture('api-user').then((user) =>
     cy
-      .request('POST', `${Cypress.env('apiUrl')}/auth/login`, { ...user, expiresInMins: 5 })
+      .request('POST', `${API_URL}/auth/login`, { ...user, expiresInMins: 5 })
       .its('body.accessToken'),
   );
 });

@@ -1,5 +1,7 @@
 // API tests with cy.request against DummyJSON (public fake REST API).
-const api = () => Cypress.env('apiUrl');
+import { API_URL } from '../../support/urls';
+
+const api = () => API_URL;
 
 describe('Auth API', () => {
   it('login returns a token that unlocks /auth/me', () => {

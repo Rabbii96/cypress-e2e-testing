@@ -11,8 +11,5 @@ module.exports = defineConfig({
     retries: { runMode: 2, openMode: 0 },   // retry only in CI runs
     video: false,
     screenshotOnRunFailure: true,
-    env: {
-      apiUrl: 'https://dummyjson.com',
-    },
   },
 });
