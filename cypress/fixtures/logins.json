@@ -1,0 +1,8 @@
+{
+  "valid": { "username": "tomsmith", "password": "SuperSecretPassword!" },
+  "invalid": [
+    { "case": "wrong password", "username": "tomsmith", "password": "wrong", "message": "Your password is invalid!" },
+    { "case": "unknown user", "username": "nobody", "password": "SuperSecretPassword!", "message": "Your username is invalid!" },
+    { "case": "empty form", "username": "", "password": "", "message": "Your username is invalid!" }
+  ]
+}

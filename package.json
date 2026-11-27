@@ -1,0 +1,15 @@
+{
+  "name": "cypress-e2e-testing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "UI and API test automation with Cypress: custom commands, fixtures, data-driven tests, cy.request API tests, CI",
+  "scripts": {
+    "test": "cypress run",
+    "test:ui": "cypress run --spec 'cypress/e2e/ui/**'",
+    "test:api": "cypress run --spec 'cypress/e2e/api/**'",
+    "open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^13.15.0"
+  }
+}
